@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.rrss img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.publicidad img {
+  width: 100%;
+}
+
+footer, .navbar {
+  background-color: #207e97;
+}
