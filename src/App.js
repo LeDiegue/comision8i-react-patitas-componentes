@@ -7,6 +7,7 @@ import SeccionPerdidos from './Components/SeccionPerdidos/SeccionPerdidos';
 import Footer from './Components/Footer/Footer';
 
 function App() {
+
   return (
     <div>
       <Navbar />
