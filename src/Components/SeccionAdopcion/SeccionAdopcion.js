@@ -1,8 +1,9 @@
+import React, {useState} from 'react';
 import Card from './../Card/Card';
 import Pagination from './../Pagination/Pagination';
 
 function SeccionAdopcion(){
-    let cards = [{
+    const [cards, setCards] = useState([{
         titulo: 'Felix',
         contenido: 'lorem impsun',
         img: 'https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/10_October/persians/Persian+Cat+Facts+History+Personality+and+Care+_+ASPCA+Pet+Health+Insurance+_+white+Persian+cat+resting+on+a+brown+sofa-min.jpg'
@@ -14,10 +15,20 @@ function SeccionAdopcion(){
         titulo: 'Guapisimo',
         contenido: 'mas de mas lorem impsun',
         img: 'https://assets.entrepreneur.com/content/3x2/2000/1623694949-Jun14MemeDogerompercordvendidoNFT4millonesdedlaresPORT.jpg?width=700&crop=2:1'
-    }];
+    }]);
+
+    const agregar = () => {
+        setCards([{
+            titulo: 'Guapisimo2',
+            contenido: 'mas de mas lorem impsun2',
+            img: 'https://assets.entrepreneur.com/content/3x2/2000/1623694949-Jun14MemeDogerompercordvendidoNFT4millonesdedlaresPORT.jpg?width=700&crop=2:1'
+        }, ...cards])
+    }
+
 
     return(
         <div className="row mt-5">
+            <button onClick={agregar}>Agregar 1</button>
             {cards.map((item, index) => (
                 <Card key={index} titulo={item.titulo} contenido={item.contenido} img={item.img} />
             ))}
