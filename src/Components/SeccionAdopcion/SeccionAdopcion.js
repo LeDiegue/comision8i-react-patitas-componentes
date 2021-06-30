@@ -18,11 +18,11 @@ function SeccionAdopcion(){
     }]);
 
     const agregar = () => {
-        setCards([{
+        setCards([...cards, {
             titulo: 'Guapisimo2',
             contenido: 'mas de mas lorem impsun2',
             img: 'https://assets.entrepreneur.com/content/3x2/2000/1623694949-Jun14MemeDogerompercordvendidoNFT4millonesdedlaresPORT.jpg?width=700&crop=2:1'
-        }, ...cards])
+        }])
     }
 
 
