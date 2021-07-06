@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Card from './../Card/Card';
+import NuevaAdopcion from './../NuevaAdopcion/NuevaAdopcion';
 import Pagination from './../Pagination/Pagination';
 
 function SeccionAdopcion(){
@@ -17,18 +18,18 @@ function SeccionAdopcion(){
         img: 'https://assets.entrepreneur.com/content/3x2/2000/1623694949-Jun14MemeDogerompercordvendidoNFT4millonesdedlaresPORT.jpg?width=700&crop=2:1'
     }]);
 
-    const agregar = () => {
-        setCards([...cards, {
-            titulo: 'Guapisimo2',
-            contenido: 'mas de mas lorem impsun2',
-            img: 'https://assets.entrepreneur.com/content/3x2/2000/1623694949-Jun14MemeDogerompercordvendidoNFT4millonesdedlaresPORT.jpg?width=700&crop=2:1'
-        }])
+    const addNewCard = (card) => {
+        setCards([
+            ...cards,
+            card
+        ])
     }
-
 
     return(
         <div className="row mt-5">
-            <button onClick={agregar}>Agregar 1</button>
+
+            <NuevaAdopcion addParentCard={addNewCard} />
+
             {cards.map((item, index) => (
                 <Card key={index} titulo={item.titulo} contenido={item.contenido} img={item.img} />
             ))}

@@ -18,14 +18,17 @@ function App() {
         <Navbar />
         <div className="container">
         <Switch>
+          <Route path="/" exact>
+            <SeccionAdopcion />
+          </Route>
           <Route path="/publicidad">
             <Publicidad />
           </Route>
           <Route path="/perdidos">
             <SeccionPerdidos />
           </Route>
-          <Route path="/">
-            <SeccionAdopcion />
+          <Route path="*">
+            <h1>NO!</h1>
           </Route>
         </Switch>
           {/* <Publicidad /> */}
